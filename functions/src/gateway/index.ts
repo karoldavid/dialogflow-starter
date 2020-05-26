@@ -27,8 +27,6 @@ export const dialogflowGateway = functions.https.onRequest(
       async (): Promise<void> => {
         const { queryInput, sessionId } = request.body;
 
-        console.log(process.env.FIREBASE_CONFIG);
-
         const sessionClient = new SessionsClient({
           credentials: serviceAccount,
         });
