@@ -19,16 +19,14 @@ git clone --depth 1 https://github.com/karoldavid/dialogflow-starter.git
 
 ## Dialogflow Setup
 
-- Create an agent with [dialogflow](https://dialogflow.com/).
+- Create an agent with [Dialogflow](https://dialogflow.com/).
 - Associate the agent with an existing Google Project or create a new Google Project.
 - Create an intent, add a couple of training phrases for this intent, and add one ore more actions, parameters with prompts.
 - At the very bottom, enable fulfillment for this intent to be able to call a webservice to connect the backend and finally save the intent.
-- Got to Fulfillment, enable the Webhook, add the Webhook url with your project id the [webhook name](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L41) and hit save:
+- Got to Fulfillment, enable the Webhook, add the Webhook url with your [project ID](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) the [webhook name](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L41) and hit save:
 
 ```
 https://us-central1-<project-id>.cloudfunctions.net/dialogflowFirebaseFulfillment
 ```
 
 ## Project Setup
-
-### Project Setup
