@@ -43,4 +43,5 @@ firebase init functions
 - When asked to overwrite an existing file, always choose NO.
 - When asked to install npm dependencies, say YES.
 
+[WIP]
 
