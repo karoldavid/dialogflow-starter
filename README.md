@@ -30,3 +30,17 @@ https://us-central1-<project-id>.cloudfunctions.net/dialogflowFirebaseFulfillmen
 ```
 
 ## Firebase Setup
+
+At the root level of your local dialogflow-starter repository initialize your firebase project using the following command:
+
+```
+firebase init functions
+```
+
+- Choose your dialogflow project from the project list. 
+- Choose TypeScript.
+- Choose to use TSLINT.
+- When asked to overwrite an existing file, always choose NO.
+- When asked to install npm dependencies, say YES.
+
+
