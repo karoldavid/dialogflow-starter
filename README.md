@@ -29,4 +29,4 @@ git clone --depth 1 https://github.com/karoldavid/dialogflow-starter.git
 https://us-central1-<project-id>.cloudfunctions.net/dialogflowFirebaseFulfillment
 ```
 
-## Project Setup
+## Firebase Setup
