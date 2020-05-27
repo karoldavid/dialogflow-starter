@@ -66,4 +66,4 @@ node_modules/
 
 service-account.json
 
-.firebase.rc
+.firebaserc
