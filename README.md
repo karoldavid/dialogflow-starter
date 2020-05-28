@@ -99,7 +99,7 @@ Finally, if everything looks just fine, deploy the functions:
 firebase deploy
 ```
 
-### Test the gateway and webhook
+## Test the gateway and webhook
 
 - To test the interactions with the agent via _http requests_, open the **Postman API Client**.
 - Set the _request method_ to _POST_.
