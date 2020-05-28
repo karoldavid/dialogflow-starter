@@ -68,7 +68,7 @@ dialogflow-starter/functions/service-account.json
 
 ### Connect the Webhook
 
-In the webhook script [(functions/src/fulfillment/index.ts)](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L49):
+In the webhook script in [`functions/src/fulfillment/index.ts`](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L49):
 
 - Replace the intent name to your intent name.
 
