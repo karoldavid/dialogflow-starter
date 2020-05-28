@@ -70,7 +70,7 @@ dialogflow-starter/functions/service-account.json
 
 In the webhook script in [`functions/src/fulfillment/index.ts`](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L49):
 
-- Replace the intent name to your intent name.
+- Replace the intent name with your intent name.
 
 - Add your own intent handler.
 
@@ -101,7 +101,7 @@ firebase deploy
 
 ### Test the gateway and webhook
 
-- To test the interactions with the agent via _http requests_, open the _Postman API Client_.
+- To test the interactions with the agent via _http requests_, open the **Postman API Client**.
 - Set the _request method_ to _POST_.
 - Set the Dialogflow gateway's _request url_ (which can be copied from the terminal output). Here is an example:
 
