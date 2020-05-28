@@ -21,17 +21,19 @@ git clone --depth 1 https://github.com/karoldavid/dialogflow-starter.git
 
 Find the next installation instructions below in the _Firebase Setup_ section.
 
+## Recommended Readings
+
+It is highly suggested to read and follow the instructions [here](https://cloud.google.com/dialogflow/docs/quick/setup) first (especially the part about authentication).
+
 ## Dialogflow Setup
 
-It is suggested to read and follow the instructions [here](https://cloud.google.com/dialogflow/docs/quick/setup) first (especially the part about authentication).
+To set up your Dialogflow agent with intent and webhook, read the [Dialogflow basics](https://cloud.google.com/dialogflow/docs/basics) and follow below steps:
 
-To set up your dialogflow agent with intent and webhook, follow below steps:
-
-- Create an agent with [Dialogflow](https://dialogflow.com/).
-- Associate the agent with an existing Google Project or create a new Google Project.
-- Create an intent, add a couple of training phrases for this intent, and add one ore more actions, parameters with prompts.
-- At the very bottom, enable fulfillment for this intent to be able to call a webservice to connect the backend and finally save the intent.
-- Got to Fulfillment, enable the Webhook, add the Webhook url with your [project ID](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) the [webhook name](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L41) and hit save:
+- Create an _agent_ with [Dialogflow](https://dialogflow.com/).
+- Associate the agent with an existing _Google Project_ or create a new Google Project.
+- Create an _intent_, add a couple of _training phrases_ for this intent, and add one ore more _actions, parameters with prompts_.
+- At the very bottom, enable [Fulfillment](https://cloud.google.com/dialogflow/docs/fulfillment-overview) for this intent to be able to call a _webservice_ to connect the backend. Finally, save the intent.
+- Got to Fulfillment, enable the [Webhook](https://cloud.google.com/dialogflow/docs/fulfillment-webhook), add the Webhook url with your [project ID](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) the [webhook name](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L41) and hit save:
 
 ```
 https://us-central1-<project-id>.cloudfunctions.net/dialogflowFirebaseFulfillment
@@ -47,7 +49,7 @@ At the root level of your local dialogflow-starter repository [initialize the Fi
 firebase init functions
 ```
 
-- Choose your dialogflow project from the project list.
+- Choose your Dialogflow project from the project list.
 - Choose TypeScript.
 - Choose to use TSLINT.
 - When asked to overwrite an existing file, always choose NO.
@@ -97,8 +99,8 @@ firebase deploy
 
 ### Test the gateway and webhook
 
-- To test the interactions with the agent via _http requests_, open the *Postman API Client*.
-- Set the _request method_ to *POST*.
+- To test the interactions with the agent via _http requests_, open the _Postman API Client_.
+- Set the _request method_ to _POST_.
 - Set the Dialogflow gateway's _request url_ (which can be copied from the terminal output). Here is an example:
 
 ```
@@ -120,7 +122,7 @@ http://localhost:5000/walkthrough-fhakgj/us-central1/dialogflowGateway
 ```
 
 - When you now hit the send button, you should get a response from your Dialogflow agent.
-- The answer of the last question should  trigger the webhook. If your intent's fulfillement is set up to save data to the firebase db, you can control the operation in your Firebase project database.
+- The answer of the last question should trigger the webhook. If your intent's fulfillement is set up to save data to the firebase db, you can control the operation in your Firebase project database.
 - Finally, the Dialogflow agent's final answer may look as configured in the sample [intent handler](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L37):
 
 ```
@@ -194,4 +196,5 @@ http://localhost:5000/walkthrough-fhakgj/us-central1/dialogflowGateway
     "sentimentAnalysisResult": null
 }
 ```
+
 [WIP]
