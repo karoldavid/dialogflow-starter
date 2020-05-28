@@ -21,7 +21,7 @@ git clone --depth 1 https://github.com/karoldavid/dialogflow-starter.git
 
 Find the next installation instructions below in the _Firebase Setup_ section.
 
-## Recommended to Read Before Proceeding
+## Recommended to Read First
 
 It is highly suggested to read and follow the instructions [here](https://cloud.google.com/dialogflow/docs/quick/setup) first (especially the part about authentication).
 
@@ -43,7 +43,7 @@ https://us-central1-<project-id>.cloudfunctions.net/dialogflowFirebaseFulfillmen
 
 ### Initialize the Project
 
-At the root level of your local dialogflow-starter repository [initialize the Firebase SDK for Cloud Functions](https://firebase.google.com/docs/functions/get-started):
+- At the root level of your local dialogflow-starter repository [initialize the Firebase SDK for Cloud Functions](https://firebase.google.com/docs/functions/get-started):
 
 ```
 firebase init functions
@@ -55,7 +55,7 @@ firebase init functions
 - When asked to overwrite an existing file, always choose NO.
 - When asked to install npm dependencies, say YES.
 
-### Add the service-account.json file
+### Add the Service Account Key
 
 - Got to the Firebase Console, select your project, got to _Settings_, and then _Service accounts_.
 - Click the _Generate Private Key_ button.
@@ -79,7 +79,7 @@ intentMap.set([YOUR INTENT NAME], yourCallback(queryResult));
 
 ### Run and deploy
 
-Before launching the gateway, cd into to functions folder and execute the following command:
+Before launching the app, cd into to functions folder and execute the following command:
 
 ```
 npm run build
