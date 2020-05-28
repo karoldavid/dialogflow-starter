@@ -21,7 +21,7 @@ git clone --depth 1 https://github.com/karoldavid/dialogflow-starter.git
 
 Find the next installation instructions below in the _Firebase Setup_ section.
 
-## Recommended Readings
+## Recommended to Read Before Proceeding
 
 It is highly suggested to read and follow the instructions [here](https://cloud.google.com/dialogflow/docs/quick/setup) first (especially the part about authentication).
 
