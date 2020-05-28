@@ -197,4 +197,6 @@ http://localhost:5000/walkthrough-fhakgj/us-central1/dialogflowGateway
 }
 ```
 
-[WIP]
+## License
+
+The [MIT License](https://github.com/karoldavid/dialogflow-starter/blob/master/LICENSE) (MIT).
