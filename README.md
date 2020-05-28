@@ -55,7 +55,7 @@ firebase init functions
 
 ### Add the service-account.json file
 
-- Got to the Firebase Console, select your project, got to \__Settings_, and then _Service accounts_.
+- Got to the Firebase Console, select your project, got to _Settings_, and then _Service accounts_.
 - Click the _Generate Private Key_ button.
 - Download the json file to your local project's functions folder.
 - Rename the key file to `service-account.json`:
@@ -66,11 +66,12 @@ dialogflow-starter/functions/service-account.json
 
 ### Connect the Webhook
 
-- Replace the intent name to your intent name [here](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L49)(`functions/src/fulfillment/index.ts`).
+- Replace the intent name to your intent name [here](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L49).
 
 - Add your own intent handler.
 
 ```
+// functions/src/fulfillment/index.ts
 intentMap.set([YOUR INTENT NAME], yourCallback(queryResult));
 ```
 
@@ -82,7 +83,7 @@ Before launching the gateway, cd into to functions folder and execute the follow
 npm run build
 ```
 
-Then, to run the following command to start the emulator:
+Next, execute below command to start the emulator:
 
 ```
 firebase serve
@@ -96,15 +97,15 @@ firebase deploy
 
 ### Test the gateway and webhook
 
-- To do http requests, open the Postman API Client.
-- Set the request method to _POST_.
-- Add the Dialogflow gateway's url (which you can copy from the terminal output). Here is an example:
+- To test the interactions with the agent via _http requests_, open the *Postman API Client*.
+- Set the _request method_ to *POST*.
+- Set the Dialogflow gateway's _request url_ (which can be copied from the terminal output). Here is an example:
 
 ```
 http://localhost:5000/walkthrough-fhakgj/us-central1/dialogflowGateway
 ```
 
-- Finally, add the request body. It should contain the `sessionId` string, and the `queryInput` object. Set the `queryInput.text` propety to one of your intent's training phrases:
+- Finally, add the _request body_. It should contain the `sessionId` string, and the `queryInput` object. Set the `queryInput.text` property to one of your intent's training phrases:
 
 ```
 {
@@ -118,9 +119,9 @@ http://localhost:5000/walkthrough-fhakgj/us-central1/dialogflowGateway
 }
 ```
 
-- When you now hit the send button, you should get a response from the agent.
-- After answering the last question, the webhook should be triggered. If your intent is set up to save data to the firebase db, you can control the operation there.
-- Finally, the agent's final answer may look as configured in the sample [intent handler](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L37):
+- When you now hit the send button, you should get a response from your Dialogflow agent.
+- The answer of the last question should  trigger the webhook. If your intent's fulfillement is set up to save data to the firebase db, you can control the operation in your Firebase project database.
+- Finally, the Dialogflow agent's final answer may look as configured in the sample [intent handler](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L37):
 
 ```
 {
