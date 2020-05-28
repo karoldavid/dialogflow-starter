@@ -1,6 +1,6 @@
 # Dialogflow Starter
 
-Use this code, written in TypeScirpt, to set up a **"serverless" chatbot running on Node.js**. The script consists of a gateway and one fulfillment webhook with Google [Dialogflow](https://dialogflow.com/) and [Firebase](https://firebase.google.com/) Cloud Functions.
+Use this code, written in TypeScript, to set up a **"serverless" chatbot running on Node.js**. The script consists of a gateway and one fulfillment webhook with Google [Dialogflow](https://dialogflow.com/) and [Firebase](https://firebase.google.com/) Cloud Functions.
 
 ## Prerequisites
 
