@@ -29,11 +29,11 @@ It is highly suggested to read and follow the instructions [here](https://cloud.
 
 To set up your Dialogflow agent with intent and webhook, read the [Dialogflow basics](https://cloud.google.com/dialogflow/docs/basics) and follow below steps:
 
-- Create an _agent_ with [Dialogflow](https://dialogflow.com/).
+- Create an _agent_ with **Dialogflow**.
 - Associate the agent with an existing _Google Project_ or create a new Google Project.
 - Create an _intent_, add a couple of _training phrases_ for this intent, and add one ore more _actions, parameters with prompts_.
 - At the very bottom, enable [Fulfillment](https://cloud.google.com/dialogflow/docs/fulfillment-overview) for this intent to be able to call a _webservice_ to connect the backend. Finally, save the intent.
-- Got to Fulfillment, enable the [Webhook](https://cloud.google.com/dialogflow/docs/fulfillment-webhook), add the Webhook url with your [project ID](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) the [webhook name](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L41) and hit save:
+- Got to Fulfillment, enable the [Webhook](https://cloud.google.com/dialogflow/docs/fulfillment-webhook), add the webhook url with your [project ID](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) the [webhook name](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L41) and hit save:
 
 ```
 https://us-central1-<project-id>.cloudfunctions.net/dialogflowFirebaseFulfillment
@@ -68,7 +68,9 @@ dialogflow-starter/functions/service-account.json
 
 ### Connect the Webhook
 
-- Replace the intent name to your intent name [here](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L49).
+In the webhook script [(functions/src/fulfillment/index.ts)](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L49):
+
+- Replace the intent name to your intent name.
 
 - Add your own intent handler.
 
