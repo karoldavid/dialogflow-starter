@@ -68,7 +68,7 @@ dialogflow-starter/functions/service-account.json
 
 ### Connect the Webhook
 
-In the webhook script in [`functions/src/fulfillment/index.ts`](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L49):
+In the webhook script in [`functions/src/fulfillment/index.ts`](./functions/src/fulfillment/index.ts#L49):
 
 - Replace the intent name with your intent name.
 
@@ -125,8 +125,8 @@ http://localhost:5000/walkthrough-fhakgj/us-central1/dialogflowGateway
 
 - When you now hit the send button, you should get a response from your Dialogflow agent.
 - The answer of the last question should trigger the webhook. If your intent's fulfillement is set up to save data to the firebase db, you can control the operation in your Firebase project database.
-- The Dialogflow agent's final answer should look as configured in the [intent handler](https://github.com/karoldavid/dialogflow-starter/blob/master/functions/src/fulfillment/index.ts#L37).
+- The Dialogflow agent's final answer should look as configured in the [intent handler](./functions/src/fulfillment/index.ts#L37).
 
 ## License
 
-The [MIT License](https://github.com/karoldavid/dialogflow-starter/blob/master/LICENSE) (MIT).
+The [MIT License](./LICENSE) (MIT).
